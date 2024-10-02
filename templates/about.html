@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>О компании</h2>
+<p>Мы работаем на рынке нефтяной промышленности с 1990 года, внедряя новейшие технологии и обеспечивая высокое качество услуг.</p>
+<h3>Наша команда:</h3>
+<ul>
+    {% for person in team %}
+    <li>{{ person.name }} - {{ person.position }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
